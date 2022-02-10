@@ -59,8 +59,9 @@ app.get("/products", async (req, res)=>{
  	res.json({message:"Welcome to the Products page"})
 })
 
+const PORT = process.env.PORT || 3001;
 
-app.listen(port=3001, ()=>{
-    console.log("Server running on", port)
+app.listen(PORT, ()=>{
+    console.log("Server running on", PORT)
 })
 
