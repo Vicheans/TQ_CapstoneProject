@@ -59,6 +59,22 @@ app.get("/products", async (req, res)=>{
  	res.json({message:"Welcome to the Products page"})
 })
 
+
+const productArr = [
+   {id:1, product_name:'Louis Vuitton Bag', price: 5000},
+   {id:2, product_name:'Vendi Watch', price: 3000},
+   {id:3, product_name:'Channel Bag', price: 1000},
+]
+
+
+app.get("/product", function(req, res, next){
+     res.json({message:'Products returned successfully', products: 
+productArr})
+})
+
+
+
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, ()=>{
