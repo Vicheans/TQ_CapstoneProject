@@ -19,7 +19,7 @@ const router= require("./routes/router")
 
 app.use("/api", router);
 
-let PORT = process.env.PORT;
+let PORT = process.env.PORT || 3001;
 app.listen(PORT, ()=>{
     console.log("App is running on Port", PORT)
 })
