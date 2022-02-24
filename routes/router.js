@@ -8,7 +8,7 @@ const CartRouter = require("./CartRoute/")
 
 router.get("/", (req, res, next)=>{
     // res.json({ message: "Welcome to the API" });
-    res.render('index', {message: "Welcome to the API" });
+    res.send({message: "Welcome to the API" });
 })
 
 router.use("/user", UserRouter);
