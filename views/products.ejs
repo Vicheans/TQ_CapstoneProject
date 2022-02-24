@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TQ Backend Capstone </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+
+    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="logo">
+                <h1 class="text-light"><a href="#"><span>TQ Backend Capstone </span></a></h1>
+            </div>
+
+       
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Products</h2>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="blog" class="blog">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-8 entries">
+                        <div class="col-lg-12" style="">
+                        
+                        <% products.map(item => { %>
+                            <div class="entry col-6">
+                            <div class="entry-img">
+                                <img src="https://is4.fwrdassets.com/images/p/fw/45/GIVE-WY608_V1.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="#"><%= item.name %> | <%= item.price %></a>
+                            </h2>
+
+
+                            <div class="entry-content">
+                                <p>
+                                    Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
+                                    praesentium. 
+                                </p>
+                                <div class="read-more">
+                                    <form action="/add" method="post">
+                                        <input type="number" name="id" value="<%=item.id%>" hidden>
+                                        <button class="add-to-cart btn btn-info text-dark">Add to Cart</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% }) %>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="sidebar">
+
+                            <h3 class="sidebar-title">Cart </h3>
+                          
+                            <div class="sidebar-item recent-posts">
+                           
+
+                            </div><!-- End sidebar recent posts-->
+
+                            <h3 class="sidebar-title">Total </h3><h3 class="align-right">N <%= total %></h3>
+                            <div class="read-more">
+                                <a href="#" class="btn btn-warning">Complete Checkout</a>
+                            </div>
+                        </div><!-- End sidebar -->
+
+                    </div><!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+        </section><!-- End Blog Section -->
+
+    </main><!-- End #main -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
